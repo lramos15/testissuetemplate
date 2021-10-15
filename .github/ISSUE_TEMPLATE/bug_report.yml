@@ -11,8 +11,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        Please search for duplicate issues prior than opening a new one.
         Bug reports help us improve the stability and quality of the product! Please fill out as much information as possible:
+
+  - type: checkboxes
+  id: duplicates
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
 
   - type: textarea
     id: environment
@@ -39,14 +47,15 @@ body:
     attributes:
       label: How to reproduce
       description: Please provide the minimal steps you took to recreate this bug.
+      render: markdown
+      placeholder: |
+        1. Select this...
+        2. Click this...
+        3. See error...
     validations:
       required: true 
-  - type: markdown
-    attributes: 
-      value: |
-        🚧 – _Bug without reproduction steps are much harder to solve and risk being closed for lack of information._
   
-    - type: dropdown
+  - type: dropdown
     id: extensions
     attributes:
       label: Disabling extensions
@@ -67,13 +76,13 @@ body:
     attributes: 
       label: Screenshots / Logs 📽
       description: A screenshot, gif, or any additional logs you can provide will help us track down and resolve your issue quicker.
-  - type: markdown
-    attributes:
       render: shell
-      value: |
-        See [gifcap.dev](https://gifcap.dev) for a browser based gif recording tool.
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        See [gifcap.dev](https://gifcap.dev) for a browser based gif recording tool.
  
   - type: dropdown
     id: pr
@@ -82,7 +91,7 @@ body:
       multiple: false
       options:
         - "Yes,  I am willing to help solve this bug in a PR"
-        - "No, I am afraid I cannot help regarding this"
+        - "No, I am afraid I cannot help with this issue"
     validations:
       required: false
   - type: markdown
