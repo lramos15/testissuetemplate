@@ -8,22 +8,25 @@ description: File a bug report
 
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search for duplicate issues prior than opening a new one.
+        Bug reports help us improve the stability and quality of the product! Please fill out as much information as possible:
+
   - type: textarea
     id: environment
     attributes: 
       label: Environment 🖥
     validations:
       required: true
+
   - type: markdown
     attributes:
       value: |
         Please provide information about which version of VS Code you're running, the machine you're running it on, and if in the browser which browser you're using.
         This can be be found by going Help -> About or on macOS by clicking the application name -> About.
 
-  - type: markdown
-    attributes:
-      value: |
-        Bug reports help us improve the stability and quality of the product! Please fill out as much information as possible:
   - type: textarea
     id: description
     attributes: 
@@ -39,7 +42,7 @@ body:
     validations:
       required: true 
   - type: markdown
-    attributes:
+    attributes: 
       value: |
         🚧 – _Bug without reproduction steps are much harder to solve and risk being closed for lack of information._
   
@@ -66,6 +69,7 @@ body:
       description: A screenshot, gif, or any additional logs you can provide will help us track down and resolve your issue quicker.
   - type: markdown
     attributes:
+      render: shell
       value: |
         See [gifcap.dev](https://gifcap.dev) for a browser based gif recording tool.
     validations:
