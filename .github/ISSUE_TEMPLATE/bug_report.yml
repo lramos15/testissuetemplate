@@ -26,6 +26,9 @@ body:
     id: environment
     attributes: 
       label: Environment 🖥
+      placeholder: |
+        VS Code Version: 
+        OS Version: 
     validations:
       required: true
 
