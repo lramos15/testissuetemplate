@@ -40,7 +40,8 @@ body:
     attributes: 
       label: Description 🐛
       description: Please provide a clear and concise description of the bug.
-      required: true  
+    validations:
+      required: true
       
   - type: textarea
     id: reproduction
