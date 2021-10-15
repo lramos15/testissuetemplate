@@ -14,13 +14,13 @@ body:
         Bug reports help us improve the stability and quality of the product! Please fill out as much information as possible:
 
   - type: checkboxes
-  id: duplicates
-  attributes:
-    label: Is there an existing issue for this?
-    description: Please search to see if an issue already exists for the bug you encountered.
-    options:
-    - label: I have searched the existing issues
-      required: true
+    id: duplicates
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+      - label: I have searched the existing issues
+        required: true
 
   - type: textarea
     id: environment
