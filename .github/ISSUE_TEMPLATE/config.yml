@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Bug report
-    url: vscode://open
+  - name: "Report bugs with VS Code's built-in issue report
+    url: http://code.visualstudio.com/"
     about: Open `Help: Report Issue` in Visual Studio code to the most actionable file bugs.
